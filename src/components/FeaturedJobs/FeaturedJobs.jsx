@@ -9,7 +9,7 @@ const FeaturedJobs = () => {
   const { featuredJobs } = useLoaderData();
 
   return (
-    <section className="feature-job">
+    <section className="feature-job" id="apply">
       <div className="feature-container container-center">
         <h2>Featured Jobs</h2>
         <p className="feature-desc">

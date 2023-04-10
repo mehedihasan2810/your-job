@@ -43,8 +43,9 @@ const Navbar = () => {
               </li>
             </ul>
           </nav>
-
-          <button className="btn-primary">Start Applying</button>
+          <a href="#apply">
+            <button className="btn-primary">Start Applying</button>
+          </a>
         </div>
 
         <button

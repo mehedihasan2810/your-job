@@ -53,12 +53,12 @@ const JobDetails = () => {
             <hr />
             <div className="salary-job-title">
               <div>
-                <MonetizationOnOutlinedIcon className="contact-icon" /> 
+                <MonetizationOnOutlinedIcon className="contact-icon" />
                 <strong> Salary: </strong>
                 100k
               </div>
               <div>
-                <WorkOutlineOutlinedIcon className="contact-icon" /> 
+                <WorkOutlineOutlinedIcon className="contact-icon" />
                 <strong> Job Title: </strong>
                 divroduct Manager
               </div>

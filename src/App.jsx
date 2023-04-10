@@ -18,7 +18,7 @@ const Layout = () => (
   <div>
     <Navbar />
     <main>
-    <Outlet />
+      <Outlet />
     </main>
   </div>
 );
@@ -28,7 +28,11 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} loader={categoryLoader} />
       <Route path="/statistics" element={<Statistics />} />
-      <Route path="/job-details" element={<JobDetails />} loader={jobDetailsLoader} />
+      <Route
+        path="/job-details"
+        element={<JobDetails />}
+        loader={jobDetailsLoader}
+      />
       <Route path="/applied-jobs" element={<AppliedJobs />} />
       <Route path="/blog" element={<Blog />} />
     </Route>

@@ -19,6 +19,7 @@
   .job-details-container {
     max-width: 1320px;
     margin: 8rem auto;
+    padding: 0.6rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
@@ -76,8 +77,16 @@
     color: #7e90fe;
   }
 
-  .apply-btn{
+  .apply-btn {
     width: 100%;
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .job-details {
+    .job-details-container {
+      grid-template-columns: 1fr;
+    }
   }
 }

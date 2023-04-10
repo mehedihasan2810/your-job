@@ -19,8 +19,10 @@
   }
 
   .category-items {
-    display: flex;
-    justify-content: space-around;
+    // display: flex;
+    // justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
   }
   .category-item {
@@ -41,8 +43,23 @@
     color: #474747;
     margin-bottom: 0.5rem;
   }
-  .job-available{
+  .job-available {
     text-align: left;
     color: #757575;
+  }
+}
+
+@media (max-width: 992px) {
+  .category {
+    .category-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (max-width: 576px) {
+  .category {
+    .category-items {
+      grid-template-columns: 1fr;
+    }
   }
 }
