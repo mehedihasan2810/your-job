@@ -2,7 +2,7 @@ import "./FeaturedJobs.scss";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const FeaturedJobs = () => {
   const [isSeeAllJobs, setSeeAllJobs] = useState(false);
@@ -47,7 +47,9 @@ const FeaturedJobs = () => {
                     <MonetizationOnOutlinedIcon /> Salary : {salary}
                   </span>
                 </p>
-                <button className="btn-primary">View Details</button>
+                <Link to="/job-details">
+                  <button className="btn-primary">View Details</button>
+                </Link>
               </div>
             )
           )}
