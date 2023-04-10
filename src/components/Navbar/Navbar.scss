@@ -1,10 +1,12 @@
-
 header {
   background: linear-gradient(
-    90deg,
-    rgba(126, 144, 254, 0.05) 0%,
-    rgba(152, 115, 255, 0.05) 100%
-  );
+      90deg,
+      rgba(126, 144, 254, 0.05) 0%,
+      rgba(152, 115, 255, 0.05) 100%
+    ),
+    url("./assets/All Images/Vector-1.png");
+  background-repeat: no-repeat;
+  background-position: right;
   padding: 4.3rem 0;
 
   .header-wrapper {
@@ -17,6 +19,14 @@ header {
     font-weight: 800;
     font-size: 32px;
     color: #1a1919;
+  }
+
+  .logo-gradient {
+    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-fill-color: transparent;
   }
 
   .nav-container {

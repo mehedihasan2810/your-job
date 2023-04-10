@@ -10,7 +10,11 @@ const Navbar = () => {
   return (
     <header>
       <div className="header-wrapper container-center">
-        <h2>Your Job</h2>
+        <Link to="/">
+          <h2>
+            Your <span className="logo-gradient">Job</span>
+          </h2>
+        </Link>
 
         <div className={`nav-container ${isMenuOpen ? "open-menu" : ""}`}>
           <nav>
