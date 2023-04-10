@@ -1,0 +1,145 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "logo": "./assets/Icons/accounts 1.png",
+      "name": "Account & Finance",
+      "available": "300 Jobs Available"
+    },
+    {
+      "id": 2,
+      "logo": "./assets/Icons/business 1.png",
+      "name": "Creative Design",
+      "available": "100+ Jobs Available"
+    },
+    {
+      "id": 3,
+      "logo": "./assets/Icons/social-media 1.png",
+      "name": "Marketing & Sales",
+      "available": "150 Jobs Available"
+    },
+    {
+      "id": 4,
+      "logo": "./assets/Icons/chip 1.png",
+      "name": "Engineering Job",
+      "available": "224 Jobs Available"
+    }
+  ],
+
+  "featuredJobs": [
+    {
+      "id": 1,
+      "logo": "./assets/All Images/google-1-1 1.png",
+      "title": "Technical Database Engineer",
+      "company": "Google LLC",
+      "workspace": "Remote",
+      "location": "California, USA",
+      "time": "Full Time",
+      "salary": "100K - 150K",
+      "description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+      "responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
+      "requirement": "Bachelor degree to complete any reputational university.",
+      "experiences": "2-3 Years in this field.",
+      "contact": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "California, USA"
+      }
+    },
+    {
+      "id": 2,
+      "logo": "./assets/All Images/netflix-4 1.png  ",
+      "title": "Senior Product Designer",
+      "company": "Netflix",
+      "workspace": "Onsite",
+      "location": "Los Angels, USA",
+      "time": "Full Time",
+      "salary": "120K - 180K",
+      "description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+      "responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
+      "requirement": "Bachelor degree to complete any reputational university.",
+      "experiences": "2-3 Years in this field.",
+      "contact": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "Los Angels, USA"
+      }
+    },
+    {
+      "id": 3,
+      "logo": "./assets/All Images/tesla-9 1.png",
+      "title": "Software Engineer",
+      "company": "Tesla",
+      "workspace": "Onsite",
+      "location": "Chicago, USA",
+      "time": "Full Time",
+      "salary": "140K - 190K",
+      "description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+      "responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
+      "requirement": "Bachelor degree to complete any reputational university.",
+      "experiences": "2-3 Years in this field.",
+      "contact": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "Chicago, USA"
+      }
+    },
+    {
+      "id": 4,
+      "logo": "./assets/All Images/Group 10021.png ",
+      "title": "Motion Graphic Designer",
+      "company": "Airbnb",
+      "workspace": "Onsite",
+      "location": "New York, USA",
+      "time": "Full Time",
+      "salary": "80K - 120K",
+      "description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+      "responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
+      "requirement": "Bachelor degree to complete any reputational university.",
+      "experiences": "2-3 Years in this field.",
+      "contact": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "New York, USA"
+      }
+    },
+    {
+      "id": 5,
+      "logo": "./assets/All Images/Group 10021.png ",
+      "title": "Motion Graphic Designer",
+      "company": "Airbnb",
+      "workspace": "Onsite",
+      "location": "New York, USA",
+      "time": "Full Time",
+      "salary": "80K - 120K",
+      "description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+      "responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
+      "requirement": "Bachelor degree to complete any reputational university.",
+      "experiences": "2-3 Years in this field.",
+      "contact": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "New York, USA"
+      }
+    },
+    {
+      "id": 6,
+      "logo": "./assets/All Images/Group 10021.png ",
+      "title": "Motion Graphic Designer",
+      "company": "Airbnb",
+      "workspace": "Onsite",
+      "location": "New York, USA",
+      "time": "Full Time",
+      "salary": "80K - 120K",
+      "description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+      "responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
+      "requirement": "Bachelor degree to complete any reputational university.",
+      "experiences": "2-3 Years in this field.",
+      "contact": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "New York, USA"
+      }
+    }
+  ]
+}
