@@ -1,0 +1,52 @@
+@use "../../scss/util/reuse";
+
+header {
+  background: linear-gradient(
+    90deg,
+    rgba(126, 144, 254, 0.05) 0%,
+    rgba(152, 115, 255, 0.05) 100%
+  );
+  padding: 4.3rem;
+
+  .container-center {
+    @extend %container-center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h2 {
+    font-weight: 800;
+    font-size: 32px;
+    color: #1a1919;
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  ul {
+    // @extend %flex-center;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  a {
+    font-weight: 500;
+    color: #757575;
+  }
+
+  button {
+    @extend %btn-primary;
+  }
+}
+
+
+@media (max-width: 768px) {
+    header{
+        
+    }
+}

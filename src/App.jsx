@@ -10,6 +10,7 @@ import Home from "./pages/Home/Home";
 import Statistics from "./pages/Statistics/Statistics";
 import AppliedJobs from "./pages/AppliedJobs/AppliedJobs";
 import Blog from "./pages/Blog/Blog";
+import './App.scss';
 
 const Layout = () => (
   <div>
@@ -27,7 +28,7 @@ const router = createBrowserRouter(
       <Route path="/blog" element={<Blog />} />
     </Route>
   )
-);
+); 
 
 const App = () => {
   return (
