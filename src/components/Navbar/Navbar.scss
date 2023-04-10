@@ -1,4 +1,3 @@
-@use "../../scss/util/reuse";
 
 header {
   background: linear-gradient(
@@ -6,10 +5,9 @@ header {
     rgba(126, 144, 254, 0.05) 0%,
     rgba(152, 115, 255, 0.05) 100%
   );
-  padding: 4.3rem;
+  padding: 4.3rem 0;
 
-  .container-center {
-    @extend %container-center;
+  .header-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,7 +26,6 @@ header {
   }
 
   ul {
-    // @extend %flex-center;
     display: flex;
     align-items: center;
     gap: 2.5rem;
@@ -39,14 +36,51 @@ header {
     color: #757575;
   }
 
-  button {
-    @extend %btn-primary;
+  .menu-btn {
+    display: none;
   }
 }
 
-
 @media (max-width: 768px) {
-    header{
-        
+  header {
+    .nav-container {
+      display: none;
     }
+
+    .menu-btn {
+      display: block;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      font-size: 2rem;
+    }
+
+    .open-menu {
+      display: block;
+      position: absolute;
+      top: 6.5rem;
+      right: 0.8rem;
+      z-index: 99;
+      background: linear-gradient(
+        90deg,
+        rgba(126, 143, 254, 0.7) 0%,
+        rgba(152, 115, 255, 0.7) 100%
+      );
+      padding: 2rem;
+      flex-direction: column;
+      border-radius: 0.5rem;
+
+      nav {
+        margin-bottom: 2rem;
+      }
+
+      ul {
+        flex-direction: column;
+      }
+      a {
+        color: #ffffff;
+      }
+    }
+  }
 }
