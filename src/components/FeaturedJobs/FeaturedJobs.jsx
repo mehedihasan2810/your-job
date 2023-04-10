@@ -1,11 +1,12 @@
 import "./FeaturedJobs.scss";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
 const FeaturedJobs = () => {
+  const [isSeeAllJobs, setSeeAllJobs] = useState(false);
   const { featuredJobs } = useLoaderData();
-  console.log(featuredJobs);
 
   return (
     <section className="feature-job">
@@ -17,7 +18,7 @@ const FeaturedJobs = () => {
         </p>
 
         <div className="feature-items">
-          {featuredJobs.map(
+          {(isSeeAllJobs ? featuredJobs : featuredJobs.slice(0, 4)).map(
             ({
               id,
               logo,
@@ -50,80 +51,16 @@ const FeaturedJobs = () => {
               </div>
             )
           )}
-
-          {/* <div className="feature-item">
-            <img src="./assets/All Images/google-1-1 1.png" alt="" />
-            <h3>Technical Database Engineer</h3>
-            <p className="company-name">Google LLC</p>
-            <div className="work-time">
-              <div className="btn-secondary">Remote</div>
-              <div className="btn-secondary">Full Time</div>
-            </div>
-            <p className="address-salary">
-              <span className="align-center">
-                {" "}
-                <LocationOnOutlinedIcon /> Dhaka, Bangladesh
-              </span>
-              <span className="align-center">
-                {" "}
-                <MonetizationOnOutlinedIcon /> Salary : 100K - 150K
-              </span>
-            </p>
-            <button className="btn-primary">View Details</button>
-          </div> */}
-
-          {/* <div className="feature-item">
-            <img
-              src="../../../public/assets/All Images/google-1-1 1.png"
-              alt=""
-            />
-            <h3>Technical Database Engineer</h3>
-            <p>Google LLC</p>
-            <div className="work-time">
-              <div className="btn-secondary">Remote</div>
-              <div className="btn-secondary">Full Time</div>
-            </div>
-            <p>
-              <span> Dhaka, Bangladesh</span>
-              <span>Salary : 100K - 150K</span>
-            </p>
-            <button>View Details</button>
-          </div>
-          <div className="feature-item">
-            <img
-              src="../../../public/assets/All Images/google-1-1 1.png"
-              alt=""
-            />
-            <h3>Technical Database Engineer</h3>
-            <p>Google LLC</p>
-            <div>
-              <div>Remote</div>
-              <div>Full Time</div>
-            </div>
-            <p>
-              <span>Dhaka, Bangladesh</span>
-              <span>Salary : 100K - 150K</span>
-            </p>
-            <button>View Details</button>
-          </div>
-          <div className="feature-item">
-            <img
-              src="../../../public/assets/All Images/google-1-1 1.png"
-              alt=""
-            />
-            <h3>Technical Database Engineer</h3>
-            <p>Google LLC</p>
-            <div>
-              <div>Remote</div>
-              <div>Full Time</div>
-            </div>
-            <p>
-              <span>Dhaka, Bangladesh</span>
-              <span>Salary : 100K - 150K</span>
-            </p>
-            <button>View Details</button>
-          </div> */}
         </div>
+
+        <button
+          onClick={() => {
+            setSeeAllJobs(!isSeeAllJobs);
+          }}
+          className="see-all-btn btn-primary"
+        >
+          {isSeeAllJobs ? "See Less Jobs" : "See All Jobs"}
+        </button>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -20,16 +20,23 @@ const Navbar = () => {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink
+                  className={({ isActive, isPending }) =>
+                    isActive ? "active" : isPending ? "pending" : ""
+                  }
+                  to="/"
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <Link to="/statistics">Statistics</Link>
+                <NavLink to="/statistics">Statistics</NavLink>
               </li>
               <li>
-                <Link to="/applied-jobs">Applied Jobs</Link>
+                <NavLink to="/applied-jobs">Applied Jobs</NavLink>
               </li>
               <li>
-                <Link to="/blog">Blog</Link>
+                <NavLink to="/blog">Blog</NavLink>
               </li>
             </ul>
           </nav>
