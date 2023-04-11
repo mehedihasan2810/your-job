@@ -15,6 +15,7 @@ import Blog from "./pages/Blog/Blog";
 import "./App.scss";
 import { categoryLoader } from "./components/Category/Category";
 import JobDetails, { jobDetailsLoader } from "./pages/JobDetails/JobDetails";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 const Layout = () => (
   <div>
@@ -27,7 +28,7 @@ const Layout = () => (
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
       <Route index element={<Home />} loader={categoryLoader} />
       <Route path="/statistics" element={<Statistics />} />
       <Route path="/:id" element={<JobDetails />} loader={jobDetailsLoader} />
