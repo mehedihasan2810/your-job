@@ -16,14 +16,16 @@ import "./App.scss";
 import { categoryLoader } from "./components/Category/Category";
 import JobDetails, { jobDetailsLoader } from "./pages/JobDetails/JobDetails";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import Footer from "./components/Footer/Footer";
 
 const Layout = () => (
-  <div>
+  <>
     <Navbar />
     <main>
       <Outlet />
     </main>
-  </div>
+    <Footer />
+  </>
 );
 
 const router = createBrowserRouter(
