@@ -1,0 +1,23 @@
+.statistics {
+  .statistics-header {
+    background: linear-gradient(
+        90deg,
+        rgba(126, 144, 254, 0.05) 0%,
+        rgba(152, 115, 255, 0.05) 100%
+      ),
+      url("./assets/All Images/Vector.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding: 5.5rem 0;
+  }
+
+  h2 {
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .statistics-container {
+    margin: 8rem auto;
+  }
+}
