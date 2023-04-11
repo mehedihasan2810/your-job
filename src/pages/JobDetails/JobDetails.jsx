@@ -1,18 +1,53 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import "./JobDetails.scss";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import { setJobIds } from "../../localStorage/localStorage";
+import { useEffect, useState } from "react";
 
 export const jobDetailsLoader = async () => {
   return fetch("data.json");
 };
 
 const JobDetails = () => {
-  const data = useLoaderData();
-  console.log(data);
+  const [isJobAdded, setIsJobAdded] = useState(false);
+  const { featuredJobs } = useLoaderData();
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const {
+    description,
+    responsibility,
+    requirement,
+    experiences,
+    salary,
+    title,
+    contact,
+  } = featuredJobs.find((job) => job.id === Number(id));
+
+  const handleSetJobs = () => {
+    const status = setJobIds(id);
+    if (status === "successful") {
+      navigate("/applied-jobs");
+    } else {
+      setIsJobAdded(true);
+    }
+  };
+
+  useEffect(() => {
+    let timeoutId;
+    if (isJobAdded) {
+      timeoutId = setTimeout(() => {
+        setIsJobAdded(false);
+      }, 2000);
+    }
+
+    return () => clearTimeout(timeoutId);
+  }, [isJobAdded]);
+
   return (
     <section className="job-details">
       <div className="job-details-header">
@@ -22,29 +57,21 @@ const JobDetails = () => {
       <div className="job-details-container">
         <div className="first-half">
           <p>
-            <strong>Job Description: </strong>A UI/UX (User Interface/User
-            Experience) designer is responsible for designing and creating
-            engaging and effective interfaces for software and web applications.
-            This includes designing the layout, visual design, and interactivity
-            of the user interface.
+            <strong>Job Description: </strong>
+            {description}
           </p>
           <p>
             <strong>Job Responsibility: </strong>
-            Collaborating with cross-functional teams: UI/UX designers often
-            work closely with other teams, including product management,
-            engineering, and marketing, to ensure that the user interface is
-            aligned with business and technical requirements. You will need to
-            be able to effectively communicate your design ideas and gather
-            feedback from other team members.
+            {responsibility}
           </p>
           <p>
             <strong>Educational Requirements:</strong>
           </p>
-          <p>Bachelor degree to complete any reputational university.</p>
+          <p>{requirement}</p>
           <p>
             <strong>Experiences:</strong>
           </p>
-          <p>2-3 Years in this field.</p>
+          <p>{experiences}</p>
         </div>
 
         <div className="second-half">
@@ -55,12 +82,12 @@ const JobDetails = () => {
               <div>
                 <MonetizationOnOutlinedIcon className="contact-icon" />
                 <strong> Salary: </strong>
-                100k
+                {salary}
               </div>
               <div>
                 <WorkOutlineOutlinedIcon className="contact-icon" />
                 <strong> Job Title: </strong>
-                divroduct Manager
+                {title}
               </div>
             </div>
 
@@ -69,22 +96,28 @@ const JobDetails = () => {
             <div className="contact">
               <div>
                 <PhoneOutlinedIcon className="contact-icon" />
-                <strong> Phone: </strong> 01716004998
+                <strong> Phone: </strong> {contact.phone}
               </div>
               <div>
                 <EmailOutlinedIcon className="contact-icon" />
-                <strong> Email: </strong> info@ gmail.com
+                <strong> Email: </strong> {contact.email}
               </div>
               <div>
                 <LocationOnOutlinedIcon className="contact-icon" />
-                <strong> Address: </strong> bangladesh
+                <strong> Address: </strong> {contact.address}
               </div>
             </div>
           </div>
 
-          <button className="btn-primary apply-btn">Apply Now</button>
+          <button onClick={handleSetJobs} className="btn-primary apply-btn">
+            Apply Now
+          </button>
         </div>
       </div>
+
+      {isJobAdded && (
+        <h4 className="alert">This job has already been applied!</h4>
+      )}
     </section>
   );
 };

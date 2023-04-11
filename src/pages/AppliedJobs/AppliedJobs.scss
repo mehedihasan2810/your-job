@@ -1,0 +1,105 @@
+.applied-jobs {
+  .applied-jobs-header {
+    background: linear-gradient(
+        90deg,
+        rgba(126, 144, 254, 0.05) 0%,
+        rgba(152, 115, 255, 0.05) 100%
+      ),
+      url("./assets/All Images/Vector.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding: 5.5rem 0;
+  }
+
+  h2 {
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .applied-jobs-items {
+    margin-top: 8rem;
+  }
+
+  .applied-jobs-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .first {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .image {
+    width: 15rem;
+    height: 15rem;
+    background: #f4f4f4;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #474747;
+    margin-bottom: 0.5rem;
+  }
+
+  .name {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #757575;
+    text-align: left;
+    margin-bottom: 0.8rem;
+  }
+
+  .work-time {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .location-salary {
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #757575;
+    margin-bottom: 2rem;
+  }
+
+  .no-job{
+    text-align: center;
+    color: rgb(232, 92, 92);
+  }
+}
+
+@media (max-width: 768px) {
+  .applied-jobs {
+    .applied-jobs-item {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .image {
+      width: 100%;
+    }
+
+    .btn-primary {
+      width: 100%;
+    }
+
+    .first {
+      flex-direction: column;
+    }
+  }
+}

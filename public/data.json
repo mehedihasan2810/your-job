@@ -36,13 +36,13 @@
       "location": "California, USA",
       "time": "Full Time",
       "salary": "100K - 150K",
-      "description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
-      "responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
-      "requirement": "Bachelor degree to complete any reputational university.",
-      "experiences": "2-3 Years in this field.",
+      "description": "A database engineer is responsible for designing and creating engaging and effective database for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+      "responsibility": "Collaborating with cross-functional teams: database engineer often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
+      "requirement": "Computer science and engineer to complete any reputational university.",
+      "experiences": "4-5 Years in this field.",
       "contact": {
         "phone": "01750-00 00 00",
-        "email": "info@gmail.com",
+        "email": "johndoe@gmail.com",
         "address": "California, USA"
       }
     },
@@ -55,13 +55,13 @@
       "location": "Los Angels, USA",
       "time": "Full Time",
       "salary": "120K - 180K",
-      "description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+      "description": "A Product designer is responsible for designing and creating engaging and effective products for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
       "responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
       "requirement": "Bachelor degree to complete any reputational university.",
-      "experiences": "2-3 Years in this field.",
+      "experiences": "1-2 Years in this field.",
       "contact": {
         "phone": "01750-00 00 00",
-        "email": "info@gmail.com",
+        "email": "karim@gmail.com",
         "address": "Los Angels, USA"
       }
     },
@@ -74,20 +74,20 @@
       "location": "Chicago, USA",
       "time": "Full Time",
       "salary": "140K - 190K",
-      "description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
-      "responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
+      "description": "A software engineer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+      "responsibility": "Collaborating with cross-functional teams: software engineer often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
       "requirement": "Bachelor degree to complete any reputational university.",
-      "experiences": "2-3 Years in this field.",
+      "experiences": "6-7 Years in this field.",
       "contact": {
         "phone": "01750-00 00 00",
-        "email": "info@gmail.com",
+        "email": "rahim@gmail.com",
         "address": "Chicago, USA"
       }
     },
     {
       "id": 4,
       "logo": "./assets/All Images/Group 10021.png ",
-      "title": "Motion Graphic Designer",
+      "title": "UI/UX Designer",
       "company": "Airbnb",
       "workspace": "Onsite",
       "location": "New York, USA",

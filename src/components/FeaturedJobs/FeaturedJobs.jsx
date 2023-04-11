@@ -47,7 +47,7 @@ const FeaturedJobs = () => {
                     <MonetizationOnOutlinedIcon /> Salary : {salary}
                   </span>
                 </p>
-                <Link to="/job-details">
+                <Link to={`/${id}`}>
                   <button className="btn-primary">View Details</button>
                 </Link>
               </div>
