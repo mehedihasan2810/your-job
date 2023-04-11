@@ -24,6 +24,20 @@ const AppliedJobs = () => {
       </div>
 
       <div className="applied-jobs-items container-center">
+        <label className="filter" htmlFor="filter">
+          <select
+            onChange={(e) => console.log(e.target.value)}
+            name="filter"
+            id="filter"
+            defaultValue="filterby"
+          >
+            <option value="filterby" disabled hidden>
+              Filter By
+            </option>
+            <option value="remote">Remote</option>
+            <option value="onsite">Onsite</option>
+          </select>
+        </label>
         {appliedJobs ? (
           appliedJobs.map(
             ({

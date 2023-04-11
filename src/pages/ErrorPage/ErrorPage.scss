@@ -1,14 +1,14 @@
-.error-page{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 200px;
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 200px;
 
-    .go-back{
-       color: blue;
-       text-decoration: underline;
-       font-size: 1.2rem;
-    }
+  .go-back {
+    color: blue;
+    text-decoration: underline;
+    font-size: 1.2rem;
+  }
 }

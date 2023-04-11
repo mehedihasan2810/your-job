@@ -17,6 +17,18 @@
     text-align: center;
   }
 
+  .filter {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  select {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
   .applied-jobs-items {
     margin: 8rem auto;
   }
