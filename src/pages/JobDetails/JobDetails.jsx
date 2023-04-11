@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import "./JobDetails.scss";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
@@ -14,9 +14,9 @@ export const jobDetailsLoader = async () => {
 
 const JobDetails = () => {
   const [isJobAdded, setIsJobAdded] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true);
   const { featuredJobs } = useLoaderData();
   const { id } = useParams();
-  const navigate = useNavigate();
 
   const {
     description,
@@ -31,8 +31,10 @@ const JobDetails = () => {
   const handleSetJobs = () => {
     const status = setJobIds(id);
     if (status === "successful") {
-      navigate("/applied-jobs");
+      setIsJobAdded(true);
+      setIsSuccess(true);
     } else {
+      setIsSuccess(false);
       setIsJobAdded(true);
     }
   };
@@ -42,7 +44,7 @@ const JobDetails = () => {
     if (isJobAdded) {
       timeoutId = setTimeout(() => {
         setIsJobAdded(false);
-      }, 2000);
+      }, 2500);
     }
 
     return () => clearTimeout(timeoutId);
@@ -116,7 +118,11 @@ const JobDetails = () => {
       </div>
 
       {isJobAdded && (
-        <h4 className="alert">This job has already been applied!</h4>
+        <h4 className={isSuccess ? "success" : "alert"}>
+          {isSuccess
+            ? "The job has been applied successfully."
+            : "This job has already been applied!"}
+        </h4>
       )}
     </section>
   );

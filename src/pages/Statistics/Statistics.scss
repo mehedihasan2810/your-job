@@ -17,7 +17,11 @@
     text-align: center;
   }
 
+  // responsive chart
   .statistics-container {
     margin: 8rem auto;
+    width: 1200px;
+    height: 400px;
+    max-width: 100%;
   }
 }

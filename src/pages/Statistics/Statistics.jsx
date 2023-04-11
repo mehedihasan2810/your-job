@@ -4,6 +4,7 @@ import {
   Bar,
   CartesianGrid,
   ComposedChart,
+  LabelList,
   Legend,
   Line,
   ResponsiveContainer,
@@ -14,45 +15,45 @@ import {
 
 const data = [
   {
-    name: "1st Assignment",
-    "Quiz Number": 10,
-    "Assignment Marks": 60,
+    name: "A1",
+    QuizNumber: 30,
+    AssignmentMarks: 60,
     Watch: 48,
   },
   {
-    name: "2nd Assignment",
-    "Quiz Number": 7,
-    "Assignment Marks": 60,
+    name: "A2",
+    QuizNumber: 10,
+    AssignmentMarks: 60,
     Watch: 50,
   },
   {
-    name: "3rd Assignment",
-    "Quiz Number": 10,
-    "Assignment Marks": 60,
+    name: "A3",
+    QuizNumber: 20,
+    AssignmentMarks: 60,
     Watch: 40,
   },
   {
-    name: "4th Assignment",
-    "Quiz Number": 9,
-    "Assignment Marks": 60,
+    name: "A4",
+    QuizNumber: 9,
+    AssignmentMarks: 60,
     Watch: 45,
   },
   {
-    name: "5th Assignment",
-    "Quiz Number": 10,
-    "Assignment Marks": 60,
+    name: "A5",
+    QuizNumber: 10,
+    AssignmentMarks: 60,
     Watch: 55,
   },
   {
-    name: "6th Assignment",
-    "Quiz Number": 8,
-    "Assignment Marks": 60,
+    name: "A6",
+    QuizNumber: 8,
+    AssignmentMarks: 60,
     Watch: 50,
   },
   {
-    name: "7th Assignment",
-    "Quiz Number": 10,
-    "Assignment Marks": 60,
+    name: "A7",
+    QuizNumber: 10,
+    AssignmentMarks: 60,
     Watch: 40,
   },
 ];
@@ -66,23 +67,31 @@ const Statistics = () => {
 
       <div className="container-center">
         <div className="statistics-container">
-          {/* <ResponsiveContainer width="100%" height="100%"> */}
-          <ComposedChart width={1200} height={400} data={data}>
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend verticalAlign="top" height={36} />
-            <CartesianGrid stroke="#f5f5f5" />
-            <Area
-              type="monotone"
-              dataKey="Quiz Number"
-              fill="#8884d8"
-              stroke="#8884d8"
-            />
-            <Bar dataKey="Assignment Marks" barSize={40} fill="#0070f3" />
-            <Line type="monotone" dataKey="Watch" stroke="#ff7300" />
-          </ComposedChart>
-          {/* </ResponsiveContainer> */}
+          <ResponsiveContainer width="100%" height="100%">
+            <ComposedChart width={1200} height={400} data={data}>
+              <XAxis
+                dataKey="name"
+                // angle={45}
+                textAnchor="start"
+                // height={95}
+                // tick={{ fontSize: 14 }}
+              />
+              <YAxis />
+              <Tooltip />
+              <Legend verticalAlign="top" height={46} />
+              <CartesianGrid stroke="#f5f5f5" />
+              <Area
+                type="monotone"
+                dataKey="QuizNumber"
+                fill="#8884d8"
+                stroke="#8884d8"
+              />
+              <Bar dataKey="AssignmentMarks" barSize={40} fill="#0070f3">
+                <LabelList dataKey="AssignmentMarks" position="top" />
+              </Bar>
+              <Line type="monotone" dataKey="Watch" stroke="#ff7300" />
+            </ComposedChart>
+          </ResponsiveContainer>
         </div>
       </div>
     </section>
