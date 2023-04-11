@@ -11,7 +11,7 @@ const Blog = () => {
         <div className="question">
           <h4>When should you use context API?</h4>
           <p>
-            When a component state needed by some other component is this case
+            When a component state needed by some other component in this case
             we should use context API to allot the state data among the
             components.{" "}
           </p>
