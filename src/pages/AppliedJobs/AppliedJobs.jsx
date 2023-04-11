@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { getJobIds } from "../../localStorage/localStorage";
 import "./AppliedJobs.scss";
 import { Link, useLoaderData } from "react-router-dom";
@@ -7,6 +8,7 @@ export const appliedJobsLoader = () => {
 };
 
 const AppliedJobs = () => {
+  const [jobFilter, setJobFilter] = useState("");
   const { featuredJobs } = useLoaderData();
   const jobIds = getJobIds();
 
@@ -17,6 +19,23 @@ const AppliedJobs = () => {
     appliedJobs = null;
   }
 
+  const filterJob =
+    appliedJobs && jobFilter
+      ? appliedJobs.filter((job) => jobFilter === job.workspace.toLowerCase())
+      : [];
+
+  const finalJob = !jobFilter
+    ? appliedJobs
+    : filterJob.length === 0
+    ? null
+    : filterJob;
+
+  const handleJobFilter = (e) => {
+    const value = e.target.value;
+    setJobFilter(value);
+    console.log(value);
+  };
+
   return (
     <section className="applied-jobs">
       <div className="applied-jobs-header">
@@ -24,22 +43,24 @@ const AppliedJobs = () => {
       </div>
 
       <div className="applied-jobs-items container-center">
-        <label className="filter" htmlFor="filter">
-          <select
-            onChange={(e) => console.log(e.target.value)}
-            name="filter"
-            id="filter"
-            defaultValue="filterby"
-          >
-            <option value="filterby" disabled hidden>
-              Filter By
-            </option>
-            <option value="remote">Remote</option>
-            <option value="onsite">Onsite</option>
-          </select>
-        </label>
-        {appliedJobs ? (
-          appliedJobs.map(
+        {appliedJobs && !(jobFilter && filterJob.length === 0) && (
+          <label className="filter" htmlFor="filter">
+            <select
+              onChange={handleJobFilter}
+              name="filter"
+              id="filter"
+              defaultValue="filterby"
+            >
+              <option value="filterby" disabled hidden>
+                Filter By
+              </option>
+              <option value="remote">Remote</option>
+              <option value="onsite">Onsite</option>
+            </select>
+          </label>
+        )}
+        {finalJob ? (
+          finalJob.map(
             ({
               id,
               logo,
@@ -76,7 +97,11 @@ const AppliedJobs = () => {
             )
           )
         ) : (
-          <h1 className="no-job">You have not applied any job yet!</h1>
+          <h1 className="no-job">
+            {jobFilter && filterJob.length === 0
+              ? `There is no applied job regarding ${jobFilter}`
+              : "You have not applied any job yet!"}
+          </h1>
         )}
       </div>
     </section>
